@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<meta charset="UTF-8">
+	<title>Login</title>
+    
+</head>
+<body>
+    <script >
+       var userName=prompt("Who's there?",'');
+       if(userName=='Admin'){
+            var pass=prompt('Password?','')
+            if(pass=='TheMaster') alert('Welcome!');
+            else if(pass==null) alert("Canceled");
+            else alert('Wrong password!!!');
+       }
+       else if(userName==null) alert("Canceled");
+       else alert("I don't know you.");
+    </script>
+	
+</body>
+</html>
