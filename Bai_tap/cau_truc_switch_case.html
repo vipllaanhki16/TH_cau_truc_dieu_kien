@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<meta charset="UTF-8">
+	<title>Cấu trúc swwitch case</title>
+    
+</head>
+<body>
+    <form>
+        <input type="text" id="thang"/>
+        <input type="button" value="Tính số ngày" onclick="findDay()">
+    </form>
+	<script >
+        function findDay(){
+            var x=parseInt(document.getElementById("thang").value);
+            switch(x){
+                case 1:
+                case 3: 
+                case 5: 
+                case 7: 
+                case 9: 
+                case 11:
+                    document.write("Tháng "+x+" có 31 ngày ");
+                    break;
+                case 2:
+                    document.write("Tháng "+x+" có 28 hoặc 29 ngày");
+                    break;
+                default: 
+                    document.write("Tháng "+x+" có 30 ngày ");
+            }
+        }
+    </script>
+</body>
+</html>

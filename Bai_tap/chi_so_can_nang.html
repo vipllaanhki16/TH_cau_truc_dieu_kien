@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<meta charset="UTF-8">
+	<title>Chỉ số cân nặng của cơ thể</title>
+    
+</head>
+<body>
+	<script >
+        var height=parseFloat(prompt('Your height:',''));
+        var weight=parseFloat(prompt('Your weight:',''));
+        bmi=weight/Math.pow(height,2);
+        if (bmi < 18)
+            document.write("Underweight");
+        else if (bmi < 25.0)
+            document.write("Normal");
+        else if (bmi < 30.0)
+            document.write("Overweight");
+        else
+           document.write("Obserse");
+    </script>
+</body>
+</html>
