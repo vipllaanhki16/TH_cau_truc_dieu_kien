@@ -1,0 +1,222 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form action="">
+            <div>
+                <input type="text" id="input">
+            </div>
+            <div>
+                <div>
+                    <input type="button" value="1" id="1" onclick=press1() style="float:left">
+                </div>
+                <div>
+                    <input type="button" value="2" id="2" onclick=press2() style="float:left">
+                </div>
+                <div>
+                    <input type="button" value="3" id="3" onclick=press3() style="float:left" >
+                </div>
+                <div>
+                    <input type="button" value="+" id='+' onclick=cong()>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="button" value="4" id="4" onclick=press4() style="float:left">
+                </div>
+                <div>
+                    <input type="button" value="5" id="5" onclick=press5() style="float:left">
+                </div>
+                <div>
+                    <input type="button" value="6" id="6" onclick=press6() style="float:left">
+                </div>
+                <div>
+                    <input type="button" value="-" id='-' onclick="tru()">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="button" value="7" id="7" onclick=press7() style="float:left">
+                </div>
+                <div>
+                    <input type="button" value="8" id="8" onclick=press8() style="float:left">
+                </div>
+                <div>
+                    <input type="button" value="9" id="9" onclick=press9() style="float:left">
+                </div>
+                <div>
+                    <input type="button" value="x" id="x" onclick="nhan()">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="button" value="C" id="c" onclick=pressC() style="float:left">
+                </div>
+                <div>
+                    <input type="button" value="0" id="0" onclick=press0() style="float:left">
+                </div>
+                <div>
+                    <input type="button" value="=" id="=" onclick=bang() style="float:left">
+                </div>
+                <div>
+                    <input type="button" value="/" id="/" onclick="chia()">
+                </div>
+            </div>
+        </form>
+        <script>
+            function press1(){
+                var x1=document.getElementById('1').value;
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value=input+x1;
+            }
+            function press2(){
+                var x2=document.getElementById('2').value;
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value=input+x2;
+            }
+            function press3(){
+                var x3=document.getElementById('3').value;
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value=input+x3;
+            }
+            function press4(){
+                var x4=document.getElementById('4').value;
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value=input+x4;
+            }
+            function press5(){
+                var x5=document.getElementById('5').value;
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value=input+x5;
+            }
+            function press6(){
+                var x6=document.getElementById('6').value;
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value=input+x6;
+            }
+            function press7(){
+                var x7=document.getElementById('7').value;
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value=input+x7;
+            }
+            function press8(){
+                var x8=document.getElementById('8').value;
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value=input+x8;
+            }
+            function press9(){
+                var x2=document.getElementById('9').value;
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value=input+x2;
+            }
+            function press0(){
+                var x2=document.getElementById('0').value;
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value=input+x2;
+            }
+            function cong(){
+                var x2=document.getElementById('+').value;
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value=input+x2;
+            }
+            function tru(){
+                var x2=document.getElementById('-').value;
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value=input+x2;
+            }
+            function nhan(){
+                var x2=document.getElementById('x').value;
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value=input+x2;
+            }
+            function chia(){
+                var x2=document.getElementById('/').value;
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value=input+x2;
+            }
+            function pressC(){
+                var input=document.getElementById('input').value;
+                document.getElementById('input').value='';
+            }
+            function bang(){
+                var input=document.getElementById('input').value;
+                var a=parseInt(input.charAt(0));
+                var b=input.charAt(1);
+                var c=parseInt(input.charAt(2));
+                // alert(a);
+                // alert(b);
+                // alert(c);
+
+                switch(b){
+                    case '+': 
+                        document.getElementById('input').value=a+c;
+                        break;
+                    case '-': 
+                        document.getElementById('input').value=a-c;
+                        break;
+                    case 'x': 
+                        document.getElementById('input').value=a*c;
+                        break;
+                    case '/': 
+                        document.getElementById('input').value=a/c;
+                        break;
+                    default: 
+                        alert("Try again!!!");
+                    
+                }
+
+
+            }
+
+            // function press(){
+            //     var x1=document.getElementById('1').value;
+            //     var x2=document.getElementById('2').value;
+            //     var x3=document.getElementById('3').value;
+            //     var x4=document.getElementById('4').value;
+            //     var x5=document.getElementById('5').value;
+            //     var x6=document.getElementById('6').value;
+            //     var x7=document.getElementById('7').value;
+            //     var x8=document.getElementById('8').value;
+            //     var x9=document.getElementById('9').value;
+            //     var x0=document.getElementById('0').value;
+            //     var x;
+            //     var input=document.getElementById('input').value;
+            //     switch(x){
+            //         case 'x1':
+            //             document.getElementById('input').value=input+x1;
+            //             break;
+            //         case x2:
+            //             document.getElementById('input').value=input+x2;
+            //             break;
+            //         case x3:
+            //             document.getElementById('input').value=input+x3;
+            //             break;
+            //         case x4: 
+            //             document.getElementById('input').value=input+x4;
+            //             break;
+            //         case x5: 
+            //             document.getElementById('input').value=input+x5;
+            //             break;
+            //         case x6:
+            //             document.getElementById('input').value=input+x6;
+            //             break;
+            //         case x7: 
+            //             document.getElementById('input').value=input+x7;
+            //             break;
+            //         case x8: 
+            //             document.getElementById('input').value=input+x8;
+            //             break;
+            //         case x9: 
+            //             document.getElementById('input').value=input+x9;
+            //             break;
+            //         case x0: 
+            //             document.getElementById('input').value=input+x0;
+            //             break;
+
+            //     }
+            // }
+        </script>
+    </body>
+</html>
